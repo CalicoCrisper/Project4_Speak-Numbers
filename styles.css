@@ -37,7 +37,7 @@ p {
 }
 
 .box {
-    border: 1px sold #dedede;
+    border: 1px solid #dedede;
     display: inline-block;
     font-size: 30px;
     margin: 20px;
