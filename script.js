@@ -62,6 +62,34 @@ function checkNumber(msg) {
   }
   // The above could (should?) be refactored to a switch case
 
+  const wordToNumber = {
+    one: 1,
+    won: 1,
+    two: 2,
+    to: 2,
+    too: 2,
+    three: 3,
+    four: 4,
+    for: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    ate: 8,
+    nine: 9,
+    ten: 10,
+  };
+
+  if (wordToNumber[msg]) {
+    console.log(`adjusting ${msg} to ${wordToNumber[msg]}`);
+    msg = wordToNumber[msg];
+  } 
+  
+  // Convert to number after adjustments
+
+  //const num = Number(msg);
+
+
   // Check if the spoken content is a valid number
   if (Number.isNaN(num)) {
     const div = document.createElement('div');
@@ -130,3 +158,26 @@ recognition.addEventListener('end', () => recognition.start());
 
 
 }
+
+
+//!REPUSH AND COMMIT CLEANER CODE AND RESUBMIT AFTER VIDEO SUBMISSION
+
+//scrollingNumbers.innerHTML = generateRandomNumber();
+
+const scrollingNumbers = document.getElementById("scroll");
+const result = Math.random().toString(10).substring(2);
+
+//scrollingNumbers.innerHTML = result;
+
+//CREATING ARRAY OF NUMBERS TO SCROLL
+
+const wanderNum = [];
+let len = wanderNum.length
+
+for (let i = 0; i < 6; i++) {
+  wanderNum.push(result);
+}
+
+//Display Text
+scrollingNumbers.innerHTML = wanderNum.join("");
+

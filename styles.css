@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap');
+
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -11,12 +13,17 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+ font-family: "WDXL Lubrifont TC", sans-serif;
 }
 
 h1, h3 {
     margin-bottom: 0;
 }
+
+h1 {
+    font-size: 55px;
+}
+
 
 p {
     line-height: 1.5;
@@ -44,5 +51,21 @@ p {
     padding: 10px;
 }
 
+
+marquee {
+font-size: 100px;
+translate: 0px -100px;
+}
+
+img {
+animation: blinker 2.0s linear infinite;
+            }
+
+            @keyframes blinker {
+                80% {
+                    opacity: 0;
+                }
+
+}
 
 
